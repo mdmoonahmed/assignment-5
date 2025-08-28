@@ -57,11 +57,13 @@ document.querySelectorAll(".btn-heart").forEach((btn) => {
     if(btn.classList.contains('fa-solid')){
       btn.classList.remove('fa-solid');
       btn.classList.add('fa-regular');
+      btn.style.color = '';
       heartCount.innerText = currentCount - 1;
     }
     else{
        btn.classList.remove('fa-regular');
       btn.classList.add('fa-solid');
+      btn.style.color = 'red';
       heartCount.innerText = currentCount + 1;
     }
     
