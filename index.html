@@ -40,7 +40,7 @@
         <div
           class="flex justify-center items-center gap-1 px-5 py-1 bg-[#cce4d1] rounded-[50px] font-bold"
         >
-          <p>0</p>
+          <p id="heart-count">0</p>
           <img src="./assets/heart.png" alt="" class="h-[20px]" />
         </div>
         <div
@@ -52,7 +52,7 @@
         <div
           class="flex justify-center items-center gap-1 px-7 py-2 bg-[#00A63E] rounded-[50px] text-white font-semibold"
         >
-          <span>0</span>Copy
+          <span id="copy-count">0</span>Copy
         </div>
       </div>
     </div>
@@ -97,13 +97,15 @@
           <div class="">
             <div class="flex justify-between">
               <img src="./assets/emergency.png" alt="" class="h-[32px] mb-3" />
-              <i class="fa-regular fa-heart"></i>
+              <i class="btn-heart fa-regular fa-heart"></i>
             </div>
             <h4 class="font-bold">জাতীয় জরুরি সেবা</h4>
             <p class="text-gray-500 text-[14px]">National Emergency</p>
           </div>
           <div>
-            <h4 class="font-bold text-2xl">999</h4>
+            <h4 id="text-emergency" class="copy-text font-bold text-2xl">
+              999
+            </h4>
             <p
               class="text-sm text-gray-500 bg-gray-200 w-[86px] pl-2 p-1 rounded-xl"
             >
@@ -112,7 +114,8 @@
           </div>
           <div class="flex gap-1" class="flex">
             <button
-              class="btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-gray-500 border border-gray-300"
+              id="btn-emergency"
+              class="btn-copy btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-gray-500 border border-gray-300"
             >
               <i class="fa-regular fa-copy"></i>Copy
             </button>
@@ -127,13 +130,13 @@
           <div class="">
             <div class="flex justify-between">
               <img src="./assets/police.png" alt="" class="h-[32px] mb-3" />
-              <i class="fa-regular fa-heart"></i>
+              <i class="btn-heart fa-regular fa-heart"></i>
             </div>
             <h4 class="font-bold">পুলিশ</h4>
             <p class="text-gray-500 text-[14px]">Police</p>
           </div>
           <div>
-            <h4 class="font-bold text-2xl">999</h4>
+            <h4 id="text-police" class="copy-text font-bold text-2xl">999</h4>
             <p
               class="text-sm text-gray-500 bg-gray-200 w-[86px] pl-2 p-1 rounded-xl"
             >
@@ -142,7 +145,8 @@
           </div>
           <div class="flex gap-1">
             <button
-              class="btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-gray-500 border border-gray-300"
+              id="btn-police"
+              class="btn-copy btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-gray-500 border border-gray-300"
             >
               <i class="fa-regular fa-copy"></i>Copy
             </button>
@@ -161,13 +165,13 @@
                 alt=""
                 class="h-[32px] mb-3"
               />
-              <i class="fa-regular fa-heart"></i>
+              <i class="btn-heart fa-regular fa-heart"></i>
             </div>
             <h4 class="font-bold">ফায়ার সার্ভিস</h4>
             <p class="text-gray-500 text-[14px]">Fire Service</p>
           </div>
           <div>
-            <h4 class="font-bold text-2xl">999</h4>
+            <h4 id="text-fire" class="copy-text font-bold text-2xl">999</h4>
             <p
               class="text-sm text-gray-500 bg-gray-200 w-[86px] pl-2 p-1 rounded-xl"
             >
@@ -176,7 +180,8 @@
           </div>
           <div class="flex gap-1">
             <button
-              class="btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-gray-500 border border-gray-300"
+              id="btn-fire"
+              class="btn-copy btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-gray-500 border border-gray-300"
             >
               <i class="fa-regular fa-copy"></i>Copy
             </button>
@@ -191,13 +196,15 @@
           <div class="">
             <div class="flex justify-between">
               <img src="./assets/ambulance.png" alt="" class="h-[32px] mb-3" />
-              <i class="fa-regular fa-heart"></i>
+              <i class="btn-heart fa-regular fa-heart"></i>
             </div>
             <h4 class="font-bold">অ্যাম্বুলেন্স</h4>
             <p class="text-gray-500 text-[14px]">Ambulance</p>
           </div>
           <div>
-            <h4 class="font-bold text-2xl">1994-999999</h4>
+            <h4 id="text-ambulance" class="copy-text font-bold text-2xl">
+              1994-999999
+            </h4>
             <p
               class="text-sm text-gray-500 bg-gray-200 w-[86px] pl-2 p-1 rounded-xl"
             >
@@ -206,7 +213,8 @@
           </div>
           <div class="flex gap-1">
             <button
-              class="btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-gray-500 border border-gray-300"
+              id="btn-ambulance"
+              class="btn-copy btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-gray-500 border border-gray-300"
             >
               <i class="fa-regular fa-copy"></i>Copy
             </button>
@@ -221,13 +229,13 @@
           <div class="">
             <div class="flex justify-between">
               <img src="./assets/emergency.png" alt="" class="h-[32px] mb-3" />
-              <i class="fa-regular fa-heart"></i>
+              <i class="btn-heart fa-regular fa-heart"></i>
             </div>
             <h4 class="font-bold">নারী ও শিশু সহায়তা</h4>
             <p class="text-gray-500 text-[14px]">Women & Child Helpline</p>
           </div>
           <div>
-            <h4 class="font-bold text-2xl">109</h4>
+            <h4 id="text-helpline" class="copy-text font-bold text-2xl">109</h4>
             <p
               class="text-sm text-gray-500 bg-gray-200 w-[86px] pl-2 p-1 rounded-xl"
             >
@@ -236,7 +244,8 @@
           </div>
           <div class="flex gap-1">
             <button
-              class="btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-gray-500 border border-gray-300"
+              id="btn-helpline"
+              class="btn-copy btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-gray-500 border border-gray-300"
             >
               <i class="fa-regular fa-copy"></i>Copy
             </button>
@@ -251,13 +260,15 @@
           <div class="">
             <div class="flex justify-between">
               <img src="./assets/emergency.png" alt="" class="h-[32px] mb-3" />
-              <i class="fa-regular fa-heart"></i>
+              <i class="btn-heart fa-regular fa-heart"></i>
             </div>
             <h4 class="font-bold">দুদক</h4>
             <p class="text-gray-500 text-[14px]">Anti-Corruption</p>
           </div>
           <div>
-            <h4 class="font-bold text-2xl">106</h4>
+            <h4 id="text-corruption" class="copy-text font-bold text-2xl">
+              106
+            </h4>
             <p
               class="text-sm text-gray-500 bg-gray-200 w-[86px] pl-2 p-1 rounded-xl"
             >
@@ -266,7 +277,8 @@
           </div>
           <div class="flex gap-1">
             <button
-              class="btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-gray-500 border border-gray-300"
+              id="btn-corruption"
+              class="btn-copy btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-gray-500 border border-gray-300"
             >
               <i class="fa-regular fa-copy"></i>Copy
             </button>
@@ -281,13 +293,15 @@
           <div class="">
             <div class="flex justify-between">
               <img src="./assets/emergency.png" alt="" class="h-[32px] mb-3" />
-              <i class="fa-regular fa-heart"></i>
+              <i class="btn-heart fa-regular fa-heart"></i>
             </div>
             <h4 class="font-bold">বিদ্যুৎ বিভ্রাট</h4>
             <p class="text-gray-500 text-[14px]">Electricity Outage</p>
           </div>
           <div>
-            <h4 class="font-bold text-2xl">16216</h4>
+            <h4 id="text-electricity" class="copy-text font-bold text-2xl">
+              16216
+            </h4>
             <p
               class="text-sm text-gray-500 bg-gray-200 w-[86px] pl-2 p-1 rounded-xl"
             >
@@ -296,7 +310,8 @@
           </div>
           <div class="flex gap-1">
             <button
-              class="btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-gray-500 border border-gray-300"
+              id="btn-electricity"
+              class="btn-copy btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-gray-500 border border-gray-300"
             >
               <i class="fa-regular fa-copy"></i>Copy
             </button>
@@ -311,13 +326,13 @@
           <div class="">
             <div class="flex justify-between">
               <img src="./assets/brac.png" alt="" class="h-[32px] mb-3" />
-              <i class="fa-regular fa-heart"></i>
+              <i class="btn-heart fa-regular fa-heart"></i>
             </div>
             <h4 class="font-bold">ব্র্যাক</h4>
             <p class="text-gray-500 text-[14px]">ব্র্যাক</p>
           </div>
           <div>
-            <h4 class="font-bold text-2xl">16445</h4>
+            <h4 id="text-brac" class="copy-text font-bold text-2xl">16445</h4>
             <p
               class="text-sm text-gray-500 bg-gray-200 w-[86px] pl-2 p-1 rounded-xl"
             >
@@ -326,7 +341,8 @@
           </div>
           <div class="flex gap-1">
             <button
-              class="btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-gray-500 border border-gray-300"
+              id="btn-brac"
+              class="btn-copy btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-gray-500 border border-gray-300"
             >
               <i class="fa-regular fa-copy"></i>Copy
             </button>
@@ -345,13 +361,13 @@
                 alt=""
                 class="h-[32px] mb-3"
               />
-              <i class="fa-regular fa-heart"></i>
+              <i class="btn-heart fa-regular fa-heart"></i>
             </div>
             <h4 class="font-bold">বাংলাদেশ রেলওয়ে</h4>
             <p class="text-gray-500 text-[14px]">Bangladesh Railway</p>
           </div>
           <div>
-            <h4 class="font-bold text-2xl">999</h4>
+            <h4 id="text-railway" class="copy-text font-bold text-2xl">999</h4>
             <p
               class="text-sm text-gray-500 bg-gray-200 w-[86px] pl-2 p-1 rounded-xl"
             >
@@ -360,7 +376,8 @@
           </div>
           <div class="flex gap-1">
             <button
-              class="btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-gray-500 border border-gray-300"
+              id="btn-railway"
+              class="btn-copy btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-gray-500 border border-gray-300"
             >
               <i class="fa-regular fa-copy"></i>Copy
             </button>
@@ -373,7 +390,9 @@
         </div>
       </div>
       <!-- history for desktop -->
-      <div class="hidden md:block bg-white shadow-lg md:w-[25%] mt-5">
+      <div
+        class="hidden md:block bg-white shadow-lg md:w-[25%] mt-5 mb-5 rounded-md mr-2"
+      >
         <div class="flex justify-between items-center pt-3 px-1">
           <h3 class="font-semibold">
             <i class="fa-regular fa-clock"></i> Call History
