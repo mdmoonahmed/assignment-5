@@ -103,50 +103,56 @@ document.querySelectorAll('.btn-call').forEach((btn) => {
     const createDiv =document.createElement('div');
     createDiv.className = 'flex justify-between p-3 bg-[#f5eef2] mb-3';
 
+    
     let createH = document.createElement('h4');
     createH.className= 'font-medium';
     createH.innerText = serNameBanEl;
     
-
+    
     let createP = document.createElement('p');
     createP.className= 'text-[14px] text-gray-500';
     createP.innerText=serviceNumEl;
-
+    
+    
     let leftDiv = document.createElement('div');
     leftDiv.className= 'flex flex-col justify-start';
+    
     
     
     const time = new Date().toLocaleTimeString();
     const createRightP= document.createElement('p');
     createRightP.innerText= time;
 
+    
     leftDiv.appendChild(createH);
     leftDiv.appendChild(createP);
-
+    
     createDiv.appendChild(leftDiv);
     createDiv.appendChild(createRightP);
-
+    
     historyContainer.prepend(createDiv);
-
-
-      // call history function for mobile
-
-      const historyContainerMobile = document.getElementById('history-container-mobile');
-
-    historyContainerMobile.prepend(createDiv);
     
     
+    // call history function for mobile
     
-
+    const historyContainerMobile = document.getElementById('history-container-mobile');
     
-     
-     
-    
-     
-     
+    const createDivClone = createDiv.cloneNode(true);
+    historyContainerMobile.prepend(createDivClone);
   })
 })
+ // function for clear button desktop
+document.getElementById('btn-clear').addEventListener('click',function(){
+  const desktopHistory = document.getElementById('history-container');
+  desktopHistory.innerHTML= '';
+})
 
+// // function for clear button mobile
+
+document.getElementById('btn-clear-mobile').addEventListener('click',function(){
+  const mobileHistory = document.getElementById('history-container-mobile');
+  mobileHistory.innerHTML= '';
+})
 
 
 

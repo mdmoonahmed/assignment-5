@@ -78,12 +78,17 @@
       </button>
     </div>
     <div id="menu-history" class="hidden md:hidden">
-      <div id="history-container-mobile" class="bg-white shadow-lg mt-0 p-2 pb-5">
-        <div class="flex justify-center items-center pt-3 px-1">
-          <button class="btn px-[1.5rem] rounded-2xl text-white bg-[#00A63E]">
-            Clear
-          </button>
-        </div>
+      <div
+        id="history-container-mobile"
+        class="bg-white shadow-lg mt-0 p-2 pb-5"
+      ></div>
+      <div class="flex justify-center items-center pt-3 px-1 bg-white pb-5">
+        <button
+          id="btn-clear-mobile"
+          class="btn px-[1.5rem] rounded-2xl text-white bg-[#00A63E]"
+        >
+          Clear
+        </button>
       </div>
     </div>
     <section class="flex justify-between">
@@ -426,7 +431,10 @@
           <h3 class="font-semibold sm:text-[14px] md:tex-[16px] pl-1">
             <i class="fa-regular fa-clock"></i> Call History
           </h3>
-          <button class="btn px-[1.5rem] rounded-2xl text-white bg-[#00A63E]">
+          <button
+            id="btn-clear"
+            class="btn px-[1.5rem] rounded-2xl text-white bg-[#00A63E]"
+          >
             Clear
           </button>
         </div>
