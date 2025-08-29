@@ -46,7 +46,7 @@
         <div
           class="flex justify-center items-center gap-1 px-5 py-1 bg-[#cce4d1] rounded-[50px] font-bold"
         >
-          <p>100</p>
+          <p id="coin">100</p>
           <img src="./assets/coin.png" alt="" class="h-[24px]" />
         </div>
         <div
@@ -78,10 +78,7 @@
       </button>
     </div>
     <div id="menu-history" class="hidden md:hidden">
-      <div class="bg-white shadow-lg mt-0 p-2 pb-5">
-        <div class="p-5">
-          <h1>hello guys</h1>
-        </div>
+      <div id="history-container-mobile" class="bg-white shadow-lg mt-0 p-2 pb-5">
         <div class="flex justify-center items-center pt-3 px-1">
           <button class="btn px-[1.5rem] rounded-2xl text-white bg-[#00A63E]">
             Clear
@@ -93,17 +90,21 @@
       <div
         class="grid grid-cols-1 md:grid-cols-3 gap-5 my-5 px-5 w-full md:w-[75%]"
       >
-        <div class="p-5 flex flex-col gap-4 bg-white shadow-md rounded-lg">
+        <div
+          class="card-container p-5 flex flex-col gap-4 bg-white shadow-md rounded-lg"
+        >
           <div class="">
             <div class="flex justify-between">
               <img src="./assets/emergency.png" alt="" class="h-[32px] mb-3" />
               <i class="btn-heart fa-regular fa-heart"></i>
             </div>
-            <h4 class="font-bold">জাতীয় জরুরি সেবা</h4>
-            <p class="text-gray-500 text-[14px]">National Emergency</p>
+            <h4 class="service-name-ban font-bold">জাতীয় জরুরি সেবা</h4>
+            <p class="service-name text-gray-500 text-[14px]">
+              National Emergency
+            </p>
           </div>
           <div>
-            <h4 id="text-emergency" class="copy-text font-bold text-2xl">
+            <h4 id="text-emergency" class="service-num font-bold text-2xl">
               999
             </h4>
             <p
@@ -120,23 +121,25 @@
               <i class="fa-regular fa-copy"></i>Copy
             </button>
             <button
-              class="btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-white bg-[#00A63E]"
+              class="btn-call btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-white bg-[#00A63E]"
             >
               <i class="fa-solid fa-phone"></i>Call
             </button>
           </div>
         </div>
-        <div class="p-5 flex flex-col gap-4 bg-white shadow-md rounded-lg">
+        <div
+          class="card-container p-5 flex flex-col gap-4 bg-white shadow-md rounded-lg"
+        >
           <div class="">
             <div class="flex justify-between">
               <img src="./assets/police.png" alt="" class="h-[32px] mb-3" />
               <i class="btn-heart fa-regular fa-heart"></i>
             </div>
-            <h4 class="font-bold">পুলিশ</h4>
-            <p class="text-gray-500 text-[14px]">Police</p>
+            <h4 class="service-name-ban font-bold">পুলিশ</h4>
+            <p class="service-name text-gray-500 text-[14px]">Police</p>
           </div>
           <div>
-            <h4 id="text-police" class="copy-text font-bold text-2xl">999</h4>
+            <h4 id="text-police" class="service-num font-bold text-2xl">999</h4>
             <p
               class="text-sm text-gray-500 bg-gray-200 w-[86px] pl-2 p-1 rounded-xl"
             >
@@ -151,13 +154,15 @@
               <i class="fa-regular fa-copy"></i>Copy
             </button>
             <button
-              class="btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-white bg-[#00A63E]"
+              class="btn-call btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-white bg-[#00A63E]"
             >
               <i class="fa-solid fa-phone"></i>Call
             </button>
           </div>
         </div>
-        <div class="p-5 flex flex-col gap-4 bg-white shadow-md rounded-lg">
+        <div
+          class="card-container p-5 flex flex-col gap-4 bg-white shadow-md rounded-lg"
+        >
           <div class="">
             <div class="flex justify-between">
               <img
@@ -167,11 +172,11 @@
               />
               <i class="btn-heart fa-regular fa-heart"></i>
             </div>
-            <h4 class="font-bold">ফায়ার সার্ভিস</h4>
-            <p class="text-gray-500 text-[14px]">Fire Service</p>
+            <h4 class="service-name-ban font-bold">ফায়ার সার্ভিস</h4>
+            <p class="service-name text-gray-500 text-[14px]">Fire Service</p>
           </div>
           <div>
-            <h4 id="text-fire" class="copy-text font-bold text-2xl">999</h4>
+            <h4 id="text-fire" class="service-num font-bold text-2xl">999</h4>
             <p
               class="text-sm text-gray-500 bg-gray-200 w-[86px] pl-2 p-1 rounded-xl"
             >
@@ -186,23 +191,25 @@
               <i class="fa-regular fa-copy"></i>Copy
             </button>
             <button
-              class="btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-white bg-[#00A63E]"
+              class="btn-call btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-white bg-[#00A63E]"
             >
               <i class="fa-solid fa-phone"></i>Call
             </button>
           </div>
         </div>
-        <div class="p-5 flex flex-col gap-4 bg-white shadow-md rounded-lg">
+        <div
+          class="card-container p-5 flex flex-col gap-4 bg-white shadow-md rounded-lg"
+        >
           <div class="">
             <div class="flex justify-between">
               <img src="./assets/ambulance.png" alt="" class="h-[32px] mb-3" />
               <i class="btn-heart fa-regular fa-heart"></i>
             </div>
-            <h4 class="font-bold">অ্যাম্বুলেন্স</h4>
-            <p class="text-gray-500 text-[14px]">Ambulance</p>
+            <h4 class="service-name-ban font-bold">অ্যাম্বুলেন্স</h4>
+            <p class="service-name text-gray-500 text-[14px]">Ambulance</p>
           </div>
           <div>
-            <h4 id="text-ambulance" class="copy-text font-bold text-2xl">
+            <h4 id="text-ambulance" class="service-num font-bold text-2xl">
               1994-999999
             </h4>
             <p
@@ -219,23 +226,29 @@
               <i class="fa-regular fa-copy"></i>Copy
             </button>
             <button
-              class="btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-white bg-[#00A63E]"
+              class="btn-call btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-white bg-[#00A63E]"
             >
               <i class="fa-solid fa-phone"></i>Call
             </button>
           </div>
         </div>
-        <div class="p-5 flex flex-col gap-4 bg-white shadow-md rounded-lg">
+        <div
+          class="card-container p-5 flex flex-col gap-4 bg-white shadow-md rounded-lg"
+        >
           <div class="">
             <div class="flex justify-between">
               <img src="./assets/emergency.png" alt="" class="h-[32px] mb-3" />
               <i class="btn-heart fa-regular fa-heart"></i>
             </div>
-            <h4 class="font-bold">নারী ও শিশু সহায়তা</h4>
-            <p class="text-gray-500 text-[14px]">Women & Child Helpline</p>
+            <h4 class="service-name-ban font-bold">নারী ও শিশু সহায়তা</h4>
+            <p class="service-name text-gray-500 text-[14px]">
+              Women & Child Helpline
+            </p>
           </div>
           <div>
-            <h4 id="text-helpline" class="copy-text font-bold text-2xl">109</h4>
+            <h4 id="text-helpline" class="service-num font-bold text-2xl">
+              109
+            </h4>
             <p
               class="text-sm text-gray-500 bg-gray-200 w-[86px] pl-2 p-1 rounded-xl"
             >
@@ -250,23 +263,27 @@
               <i class="fa-regular fa-copy"></i>Copy
             </button>
             <button
-              class="btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-white bg-[#00A63E]"
+              class="btn-call btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-white bg-[#00A63E]"
             >
               <i class="fa-solid fa-phone"></i>Call
             </button>
           </div>
         </div>
-        <div class="p-5 flex flex-col gap-4 bg-white shadow-md rounded-lg">
+        <div
+          class="card-container p-5 flex flex-col gap-4 bg-white shadow-md rounded-lg"
+        >
           <div class="">
             <div class="flex justify-between">
               <img src="./assets/emergency.png" alt="" class="h-[32px] mb-3" />
               <i class="btn-heart fa-regular fa-heart"></i>
             </div>
-            <h4 class="font-bold">দুদক</h4>
-            <p class="text-gray-500 text-[14px]">Anti-Corruption</p>
+            <h4 class="service-name-ban font-bold">দুদক</h4>
+            <p class="service-name text-gray-500 text-[14px]">
+              Anti-Corruption
+            </p>
           </div>
           <div>
-            <h4 id="text-corruption" class="copy-text font-bold text-2xl">
+            <h4 id="text-corruption" class="service-num font-bold text-2xl">
               106
             </h4>
             <p
@@ -283,23 +300,27 @@
               <i class="fa-regular fa-copy"></i>Copy
             </button>
             <button
-              class="btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-white bg-[#00A63E]"
+              class="btn-call btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-white bg-[#00A63E]"
             >
               <i class="fa-solid fa-phone"></i>Call
             </button>
           </div>
         </div>
-        <div class="p-5 flex flex-col gap-4 bg-white shadow-md rounded-lg">
+        <div
+          class="card-container p-5 flex flex-col gap-4 bg-white shadow-md rounded-lg"
+        >
           <div class="">
             <div class="flex justify-between">
               <img src="./assets/emergency.png" alt="" class="h-[32px] mb-3" />
               <i class="btn-heart fa-regular fa-heart"></i>
             </div>
-            <h4 class="font-bold">বিদ্যুৎ বিভ্রাট</h4>
-            <p class="text-gray-500 text-[14px]">Electricity Outage</p>
+            <h4 class="service-name-ban font-bold">বিদ্যুৎ বিভ্রাট</h4>
+            <p class="service-name text-gray-500 text-[14px]">
+              Electricity Outage
+            </p>
           </div>
           <div>
-            <h4 id="text-electricity" class="copy-text font-bold text-2xl">
+            <h4 id="text-electricity" class="service-num font-bold text-2xl">
               16216
             </h4>
             <p
@@ -316,23 +337,25 @@
               <i class="fa-regular fa-copy"></i>Copy
             </button>
             <button
-              class="btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-white bg-[#00A63E]"
+              class="btn-call btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-white bg-[#00A63E]"
             >
               <i class="fa-solid fa-phone"></i>Call
             </button>
           </div>
         </div>
-        <div class="p-5 flex flex-col gap-4 bg-white shadow-md rounded-lg">
+        <div
+          class="card-container p-5 flex flex-col gap-4 bg-white shadow-md rounded-lg"
+        >
           <div class="">
             <div class="flex justify-between">
               <img src="./assets/brac.png" alt="" class="h-[32px] mb-3" />
               <i class="btn-heart fa-regular fa-heart"></i>
             </div>
-            <h4 class="font-bold">ব্র্যাক</h4>
-            <p class="text-gray-500 text-[14px]">ব্র্যাক</p>
+            <h4 class="service-name-ban font-bold">ব্র্যাক</h4>
+            <p class="service-name text-gray-500 text-[14px]">Brac</p>
           </div>
           <div>
-            <h4 id="text-brac" class="copy-text font-bold text-2xl">16445</h4>
+            <h4 id="text-brac" class="service-num font-bold text-2xl">16445</h4>
             <p
               class="text-sm text-gray-500 bg-gray-200 w-[86px] pl-2 p-1 rounded-xl"
             >
@@ -347,13 +370,15 @@
               <i class="fa-regular fa-copy"></i>Copy
             </button>
             <button
-              class="btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-white bg-[#00A63E]"
+              class="btn-call btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-white bg-[#00A63E]"
             >
               <i class="fa-solid fa-phone"></i>Call
             </button>
           </div>
         </div>
-        <div class="p-5 flex flex-col gap-4 bg-white shadow-md rounded-lg">
+        <div
+          class="card-container p-5 flex flex-col gap-4 bg-white shadow-md rounded-lg"
+        >
           <div class="">
             <div class="flex justify-between">
               <img
@@ -363,11 +388,15 @@
               />
               <i class="btn-heart fa-regular fa-heart"></i>
             </div>
-            <h4 class="font-bold">বাংলাদেশ রেলওয়ে</h4>
-            <p class="text-gray-500 text-[14px]">Bangladesh Railway</p>
+            <h4 class="service-name-ban font-bold">বাংলাদেশ রেলওয়ে</h4>
+            <p class="service-name text-gray-500 text-[14px]">
+              Bangladesh Railway
+            </p>
           </div>
           <div>
-            <h4 id="text-railway" class="copy-text font-bold text-2xl">999</h4>
+            <h4 id="text-railway" class="service-num font-bold text-2xl">
+              999
+            </h4>
             <p
               class="text-sm text-gray-500 bg-gray-200 w-[86px] pl-2 p-1 rounded-xl"
             >
@@ -382,7 +411,7 @@
               <i class="fa-regular fa-copy"></i>Copy
             </button>
             <button
-              class="btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-white bg-[#00A63E]"
+              class="btn-call btn px-[1rem] w-[50%] sm:w-[40%] md:w-[49%] md:px-1 rounded-md text-white bg-[#00A63E]"
             >
               <i class="fa-solid fa-phone"></i>Call
             </button>
@@ -394,14 +423,14 @@
         class="hidden md:block bg-white shadow-lg md:w-[25%] mt-5 mb-5 rounded-md mr-2"
       >
         <div class="flex justify-between items-center pt-3 px-1">
-          <h3 class="font-semibold">
+          <h3 class="font-semibold sm:text-[14px] md:tex-[16px] pl-1">
             <i class="fa-regular fa-clock"></i> Call History
           </h3>
           <button class="btn px-[1.5rem] rounded-2xl text-white bg-[#00A63E]">
             Clear
           </button>
         </div>
-        <div></div>
+        <div id="history-container" class="p-3"></div>
       </div>
     </section>
     <script src="./script.js"></script>

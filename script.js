@@ -19,9 +19,10 @@ function setInnerText(value) {
 
 document.querySelectorAll(".btn-copy").forEach((btn) => {
   btn.addEventListener("click", function () {
-    const card = btn.closest(".p-5");
-    const textEl = card.querySelector(".copy-text");
+    const card = btn.closest(".card-container");
+    const textEl = card.querySelector(".service-num");
     const text = textEl.innerText.trim();
+    
 
     const availableCount = getInnerTextNumber("copy-count");
     const newCount = availableCount + 1;
@@ -51,7 +52,6 @@ document.querySelectorAll(".btn-heart").forEach((btn) => {
   btn.addEventListener("click", function () {
     const heartCount = document.getElementById('heart-count');
     const currentCount = parseInt(heartCount.innerText);
-    console.log(heartCount,currentCount);
     
     
     if(btn.classList.contains('fa-solid')){
@@ -70,7 +70,87 @@ document.querySelectorAll(".btn-heart").forEach((btn) => {
 
   });
 });
+// function for call 
+document.querySelectorAll('.btn-call').forEach((btn) => {
+  btn.addEventListener('click',function(event){
+     // function for coin 
+     const availableCoin = document.getElementById('coin');
+     const availableCoinEl = parseInt(availableCoin.innerText);
+     
+     if(availableCoinEl < 20){
+       alert('You do not have sufficient coins to make a call.');
+       return;
+     }
 
+    availableCoin.innerText= availableCoinEl - 20;
+
+
+
+     const serviceName = btn.closest('.card-container');
+     const serviceNameEl = serviceName.querySelector('.service-name').innerText;
+     
+     const serviceNum= btn.closest('.card-container');
+     const serviceNumEl = serviceNum.querySelector('.service-num').innerText;
+     
+     
+     alert('Calling'+' '+serviceNameEl+" "+ serviceNumEl);
+
+    // call history function for desktop
+    const serNameBan = btn.closest('.card-container');
+    const serNameBanEl = serNameBan.querySelector('.service-name-ban').innerText;
+    
+    const historyContainer = document.getElementById('history-container');
+    const createDiv =document.createElement('div');
+    createDiv.className = 'flex justify-between p-3 bg-[#f5eef2] mb-3';
+
+    let createH = document.createElement('h4');
+    createH.className= 'font-medium';
+    createH.innerText = serNameBanEl;
+    
+
+    let createP = document.createElement('p');
+    createP.className= 'text-[14px] text-gray-500';
+    createP.innerText=serviceNumEl;
+
+    let leftDiv = document.createElement('div');
+    leftDiv.className= 'flex flex-col justify-start';
+    
+    
+    const time = new Date().toLocaleTimeString();
+    const createRightP= document.createElement('p');
+    createRightP.innerText= time;
+
+    leftDiv.appendChild(createH);
+    leftDiv.appendChild(createP);
+
+    createDiv.appendChild(leftDiv);
+    createDiv.appendChild(createRightP);
+
+    historyContainer.prepend(createDiv);
+
+
+      // call history function for mobile
+
+      const historyContainerMobile = document.getElementById('history-container-mobile');
+
+    historyContainerMobile.prepend(createDiv);
+    
+    
+    
+
+    
+     
+     
+    
+     
+     
+  })
+})
+
+
+
+
+// history section for mobile
 const btnMenu = document.getElementById("btn-history");
 const menu = document.getElementById("menu-history");
 btnMenu.addEventListener("click", function () {
